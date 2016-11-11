@@ -1,73 +1,19 @@
-angular.module('trinityChurch', ['ui.router'])
+angular.module('trinityChurch', ['ui.router', 'templates'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
         url: '/home',
-        templateUrl: '/home.html',
+        templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
       }
     );
     $stateProvider.state('posts', {
       url: '/posts/{id}',
-      templateUrl: '/posts.html',
+      templateUrl: 'posts/_posts.html',
       controller: 'PostsCtrl'
     })
     $urlRouterProvider.otherwise('home');
-  }
-])
-
-.factory('posts', [function(){
-  var obj = {
-    posts: []
-  };
-  return obj
-}])
-
-
-.controller('MainCtrl', [
-  '$scope',
-  'posts',
-  function($scope, posts){
-    $scope.posts = posts.posts;
-    $scope.addPost = function() {
-      if (!$scope.title || $scope.title === '') {
-        return;
-      }
-      $scope.posts.push({
-        title: $scope.title,
-        upvotes: 0,
-        comments: [
-          {author: 'Bob', body: 'Cool post brah', upvaotes: 0},
-          {author: 'God', body: 'Amen', upvotes: 666}
-        ]
-      });
-      $scope.title = '';
-    };
-    $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
-    }
-
-  },
-])
-
-.controller('PostsCtrl', [
-  '$scope',
-  '$stateParams',
-  'posts',
-  function($scope, $stateParams, posts){
-    $scope.post = posts.posts[$stateParams.id]
-    $scope.addComment = function() {
-      if ($scope.body === '') {
-        return;
-      }
-      $scope.post.comments.push({
-        body: $scope.body,
-        author: 'user',
-        upvotes: 0
-      });
-      $scope.body = '';
-    }
   }
 ])
