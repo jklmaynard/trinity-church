@@ -13,7 +13,22 @@ angular.module('trinityChurch', ['ui.router', 'templates'])
       url: '/posts/{id}',
       templateUrl: 'posts/_posts.html',
       controller: 'PostsCtrl'
-    })
+    });
+    $stateProvider.state('events', {
+      url: '/events',
+      templateUrl: 'static/_events.html',
+      controller: 'MainCtrl'
+    });
+    $stateProvider.state('about', {
+      url: '/about',
+      templateUrl: 'static/_about.html',
+      controller: 'MainCtrl'
+    });
+    $stateProvider.state('staff', {
+      url: '/staff',
+      templateUrl: 'static/_staff.html',
+      controller: 'MainCtrl'
+    });
     $urlRouterProvider.otherwise('home');
   }
 ])
