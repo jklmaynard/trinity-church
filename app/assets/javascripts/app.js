@@ -29,6 +29,11 @@ angular.module('trinityChurch', ['ui.router', 'templates'])
       templateUrl: 'static/_staff.html',
       controller: 'MainCtrl'
     });
+    $stateProvider.state('posts_home', {
+      url: '/message',
+      templateUrl: 'static/_posts_home.html',
+      controller: 'MainCtrl'
+    });
     $urlRouterProvider.otherwise('home');
   }
 ])

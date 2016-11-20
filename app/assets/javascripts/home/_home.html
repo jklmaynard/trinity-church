@@ -4,8 +4,7 @@
 
 <div ng-repeat="post in posts | orderBy: '-upvotes'" class="">
   <span ng-click="incrementUpvotes(post)">^</span>
-  {{post.title}} - upvotes: {{post.upvotes}}
-  <span><a href="#/posts/{{$index}}">Comments</a></span>
+  <a href="#/posts/{{$index}}">{{post.title}}</a>
 </div>
 
 <form class="" ng-submit="addPost()">

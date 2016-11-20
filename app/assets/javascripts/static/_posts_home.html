@@ -1,0 +1,6 @@
+<h2>Messages</h2>
+
+<div ng-repeat="post in posts | orderBy: '-upvotes'" class="">
+  <span ng-click="incrementUpvotes(post)">^</span>
+  <a href="#/posts/{{$index}}">{{post.title}}</a>
+</div>

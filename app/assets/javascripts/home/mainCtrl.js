@@ -11,10 +11,6 @@ angular.module('trinityChurch')
       $scope.posts.push({
         title: $scope.title,
         upvotes: 0,
-        comments: [
-          {author: 'Bob', body: 'Cool post brah', upvaotes: 0},
-          {author: 'God', body: 'Amen', upvotes: 666}
-        ]
       });
       $scope.title = '';
     };
