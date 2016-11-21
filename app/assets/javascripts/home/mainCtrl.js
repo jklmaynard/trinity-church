@@ -4,14 +4,22 @@ angular.module('trinityChurch')
   'posts',
   function($scope, posts){
     $scope.posts = posts.posts;
+    $scope.events = posts.events;
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {
         return;
       }
-      $scope.posts.push({
-        title: $scope.title,
-        upvotes: 0,
-      });
+      if (!$scope.is_event) {
+        $scope.posts.push({
+          title: $scope.title,
+          is_event: false
+        });
+      } else {
+        $scope.events.push({
+          title: $scope.title,
+          is_event: $scope.is_event
+        })
+      }
       $scope.title = '';
     };
     $scope.incrementUpvotes = function(post) {

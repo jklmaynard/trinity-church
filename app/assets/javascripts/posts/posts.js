@@ -1,7 +1,8 @@
 angular.module('trinityChurch')
   .factory('posts', [function(){
       var obj = {
-        posts: []
+        posts: [],
+        events: []
       };
       return obj
 }])
