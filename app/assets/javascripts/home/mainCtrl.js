@@ -12,19 +12,17 @@ angular.module('trinityChurch')
       if (!$scope.is_event) {
         $scope.posts.push({
           title: $scope.title,
+          body: $scope.body,
           is_event: false
         });
       } else {
         $scope.events.push({
           title: $scope.title,
+          body: $scope.body,
           is_event: $scope.is_event
         })
       }
       $scope.title = '';
     };
-    $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
-    }
-
   },
 ])

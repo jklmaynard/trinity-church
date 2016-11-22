@@ -6,11 +6,6 @@
   <a href="#/posts/{{$index}}">{{post.title}}</a>
 </div>
 
-<form class="" ng-submit="addPost()">
-  <input type="text" name="name" ng-model="title"></input>
-  <input type="checkbox" name="name" ng-model="is_event">
-  <button type="submit" class="btn btn-primary">Post</button>
-</form>
 
 <div ng-repeat="event in events" class="">
   <a href="#/events">{{event.title}}</a>
