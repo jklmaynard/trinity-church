@@ -23,6 +23,7 @@ angular.module('trinityChurch')
         })
       }
       $scope.title = '';
+      $scope.body = '';
     };
   },
 ])
