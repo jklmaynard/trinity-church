@@ -59,8 +59,8 @@ STAFF PAGE
   top: 15px;
 }
 .staff-image img {
-  background-color: white;
   border-radius: 50%;
+  border-style:none;
   height:100px;
   width: 100px;
 }
