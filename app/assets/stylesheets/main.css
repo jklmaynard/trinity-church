@@ -1,0 +1,52 @@
+/***************************
+GLOBAL ELEMENTS
+****************************/
+
+
+/***************************
+APPLICATION.HTML.ERB
+****************************/
+#footer {
+  background-color: lightblue;
+  border-top-color: grey;
+  border-top-style: solid;
+  border-top-width: thin;
+  flex: auto;
+  min-width: 100%;
+  padding: 5px;
+}
+
+#footer div {
+  padding: 10px;
+  text-align: center;
+}
+
+#footer div a {
+  color: black;
+}
+
+#footer div p {
+  line-height: 11px;
+}
+
+
+#navbar {
+  border-radius: 0px;
+}
+
+#ui-container {
+  background-color: red;
+  min-height: 500px;
+}
+
+#viewport-container {
+  background-color: lightblue;
+  flex: auto;
+  min-height: 600px;
+  min-width: 100%;
+}
+
+
+/***************************
+
+****************************/

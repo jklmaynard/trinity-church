@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body ng-app="trinityChurch">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" id="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
           <a href="#" class="navbar-brand">Trinity United Methodist Church</a>
@@ -25,14 +25,29 @@
         </div>
       </div>
     </nav>
-    <div class="container">
-      <ui-view>
-        <script type="text/ng-template" id="/home.html"></script>
-        <script type="text/ng-template" id="/posts.html"></script>
-      </ui-view>
-      <p>
-        Find us on <a href="https://www.facebook.com/pages/Trinity-United-Methodist-Church/117418398276272">Facebook</a>
-      </p>
+    <div class="container" id="viewport-container">
+      <div class="container" id="ui-container">
+        <ui-view>
+          <script type="text/ng-template" id="/home.html"></script>
+          <script type="text/ng-template" id="/posts.html"></script>
+        </ui-view>
+      </div>
+    </div>
+    <div class="container" id="footer">
+      <div class="col-md-4">
+        <p><a href="https://www.facebook.com/pages/Trinity-United-Methodist-Church/117418398276272">Find us on Facebook</a></p>
+        <p><a href="#/about">About Trinity United Methodist</a></p>
+        <p><a href="#/staff">Staff at Trinity United Methodist</a></p>
+      </div>
+      <div class="col-md-4">
+        <p>832 E Center Street</p><p>Warsaw, Indiana | 46580</p>
+      </div>
+      <div class="col-md-4" >
+        <p>Hours of worship:</p>
+        <p>Wednesday Service: 6:30-8pm</p>
+        <p>Sunday Service: 8-9:30am, 11-12:30pm</p>
+        <p>Sunday Youth Service: 8:30-9:30am, 11:30-12:30pm</p>
+      </div>
     </div>
   </body>
 </html>
