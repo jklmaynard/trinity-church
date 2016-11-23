@@ -44,6 +44,7 @@ APPLICATION.HTML.ERB
   flex: auto;
   min-height: 600px;
   min-width: 100%;
+  padding-bottom: 40px;
 }
 
 
