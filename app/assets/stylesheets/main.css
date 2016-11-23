@@ -4,12 +4,14 @@ GLOBAL ELEMENTS
 a {
   color: black;
 }
+body {
+  background-color: lightblue;
+}
 
 /***************************
 APPLICATION.HTML.ERB
 ****************************/
 #footer {
-  background-color: lightblue;
   border-top-color: grey;
   border-top-style: solid;
   border-top-width: thin;
@@ -28,18 +30,16 @@ APPLICATION.HTML.ERB
   border-radius: 0px;
 }
 #ui-container {
-  background-color: red;
   min-height: 500px;
 }
 #viewport-container {
-  background-color: lightblue;
   flex: auto;
   min-height: 600px;
   min-width: 100%;
   padding-bottom: 40px;
 }
 /***************************
-STAFF PAGE
+_STAFF.HTML
 ****************************/
 .staff-div {
   flex:auto;
@@ -56,7 +56,7 @@ STAFF PAGE
   width: 100px;
 }
 /***************************
-POSTS-HOME
+_POSTS_HOME.HTML
 ****************************/
 .create-post-button {
   padding-top: 50px;
@@ -65,13 +65,31 @@ POSTS-HOME
   padding: 15px 0;
 }
 
-
 /***************************
-EVENTS
+_ABOUT.HTML
 ****************************/
-
-
-
+.history-container {
+  flex: auto;
+  width: 100%;
+}
+.history-container-header {
+  padding-bottom: 10px;
+}
+.history-content {
+  padding: 0 5px;
+  border-left-style: groove;
+  border-width: thin;
+}
+.history-content p {
+  font-size: 16px;
+}
+.history-picture img {
+  height: 200px;
+  width: 200px;
+}
+.history-picture p {
+  font-size: 11px;
+}
 
 
 
