@@ -48,5 +48,24 @@ APPLICATION.HTML.ERB
 
 
 /***************************
+STAFF PAGE
+****************************/
+.staff-div {
+  flex:auto;
+  align-items: center;
+  padding: 20px;
+}
+.staff-image-container {
+  top: 15px;
+}
+.staff-image img {
+  background-color: white;
+  border-radius: 50%;
+  height:100px;
+  width: 100px;
+}
+
+
+/***************************
 
 ****************************/
