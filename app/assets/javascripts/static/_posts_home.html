@@ -1,7 +1,14 @@
-<h2>Messages</h2>
-
-<div ng-repeat="post in posts | orderBy: '-upvotes'" class="">
-  <a href="#/posts/{{$index}}">{{post.title}}</a>
+<div class="container">
+  <h2>Message</h2>
+</div>
+<div class="message">
+  <div ng-repeat="post in posts | orderBy: '-upvotes'" class="message-container">
+    <div class="message">
+      <a href="#/posts/{{$index}}">{{post.title}}</a>
+    </div>
+  </div>
 </div>
 
-<button type="button" class="btn btn-primary"><a href="#/create-post" style="color:black;">New Post</a></button>
+<div class="create-post-button col-md-12">
+  <button type="button" class="btn btn-primary"><a href="#/create-post">New Post</a></button>
+</div>
