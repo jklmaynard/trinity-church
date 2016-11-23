@@ -4,10 +4,6 @@ GLOBAL ELEMENTS
 a {
   color: black;
 }
-body {
-  background-color: lightblue;
-}
-
 /***************************
 APPLICATION.HTML.ERB
 ****************************/
@@ -72,22 +68,22 @@ _ABOUT.HTML
   flex: auto;
   width: 100%;
 }
-.history-container-header {
+.about-container-header {
   padding-bottom: 10px;
 }
-.history-content {
+.about-content {
   padding: 0 5px;
   border-left-style: groove;
   border-width: thin;
 }
-.history-content p {
+.about-content p {
   font-size: 16px;
 }
-.history-picture img {
+.about-picture img {
   height: 200px;
   width: 200px;
 }
-.history-picture p {
+.about-picture p {
   font-size: 11px;
 }
 
