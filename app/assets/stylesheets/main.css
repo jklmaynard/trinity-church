@@ -34,6 +34,50 @@ APPLICATION.HTML.ERB
   padding-bottom: 40px;
 }
 /***************************
+_HOME.HTML
+****************************/
+.event-overview {
+  padding: 5px 0;
+}
+.events-overview-container {
+  border-left-style: groove;
+  min-height: 500px;
+  padding: 15px 0 0 30px;
+}
+.post-body {
+  width: 100%;
+}
+.post-overview {
+  padding: 5px 0 5px 10px;
+}
+.posts-overview-container {
+  padding: 15px 0;
+  min-height: 500px;
+}
+.post-overview-header {
+  padding: 0 0 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************
 _STAFF.HTML
 ****************************/
 .staff-div {
