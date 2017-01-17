@@ -22,7 +22,12 @@ angular.module('trinityChurch', ['ui.router', 'templates'])
     $stateProvider.state('events', {
       url: '/events',
       templateUrl: 'static/_events.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      resolve: {
+        postPromise: ['posts', function(posts) {
+          return posts.getAll();
+        }]
+      }
     });
     $stateProvider.state('about', {
       url: '/about',

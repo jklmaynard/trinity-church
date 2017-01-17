@@ -15,6 +15,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:is_event, :title)
+    params.require(:post).permit(:is_event, :title, :body)
   end
 end
