@@ -3,8 +3,11 @@ angular.module('trinityChurch')
   '$scope',
   'posts',
   function($scope, posts){
-    $scope.posts = posts.posts;
-    $scope.events = posts.events;
+    $scope.posts = [];
+    $scope.events = [];
+    posts.posts.forEach(function (index) {
+      !index.is_event ? $scope.posts.push(index) : $scope.events.push(index);
+    })
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {
         return;
