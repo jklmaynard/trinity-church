@@ -1,4 +1,4 @@
-angular.module('trinityChurch', ['ui.router', 'templates'])
+angular.module('trinityChurch', ['ui.router', 'templates', 'Devise'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
