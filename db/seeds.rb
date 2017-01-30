@@ -27,3 +27,4 @@ Post.create([
     is_event: true
   }
   ])
+  User.create(email: 'testtest@testmail.Com', password: 'Password1234!', username: 'testusertest')

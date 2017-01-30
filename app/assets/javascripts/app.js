@@ -49,6 +49,16 @@ angular.module('trinityChurch', ['ui.router', 'templates', 'Devise'])
       templateUrl: 'static/_create-post.html',
       controller: 'MainCtrl'
     });
+    $stateProvider.state('login', {
+      url: '/login',
+      templateUrl: 'auth/_login.html',
+      controller: 'AuthCtrl',
+      onEnter: ['$state', 'Auth', function($state, Auth) {
+        Auth.currentUser().then(function() {
+          $state.go('home');
+        })
+      }]
+    })
     $urlRouterProvider.otherwise('home');
   }
 ])
