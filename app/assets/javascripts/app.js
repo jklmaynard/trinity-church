@@ -47,7 +47,7 @@ angular.module('trinityChurch', ['ui.router', 'templates', 'Devise'])
     $stateProvider.state('create-post', {
       url: '/create-post',
       templateUrl: 'static/_create-post.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
     });
     $stateProvider.state('login', {
       url: '/login',

@@ -2,9 +2,13 @@ angular.module('trinityChurch')
 .controller('MainCtrl', [
   '$scope',
   'posts',
-  function($scope, posts){
+  'Auth',
+  function($scope, posts, Auth){
     $scope.posts = [];
     $scope.events = [];
+    Auth.currentUser().then(function() {
+      $scope.signedIn = Auth.isAuthenticated;
+    })
     posts.posts.forEach(function (index) {
       !index.is_event ? $scope.posts.push(index) : $scope.events.push(index);
     })
