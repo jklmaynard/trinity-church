@@ -5,7 +5,13 @@ a {
   color: black;
 }
 body {
-  background-color: #9BCFDD;
+  background-color:#81A5D6;
+  background-image: url('background-image.jpg')
+}
+.container {
+  background-color: white;
+  margin-top: 10px;
+  padding-top: 5px;
 }
 /***************************
 APPLICATION.HTML.ERB
@@ -37,9 +43,6 @@ APPLICATION.HTML.ERB
 }
 #navbar-options-menu li {
   font-size: 18px;
-}
-#ui-container {
-  min-height: 500px;
 }
 #viewport-container {
   flex: auto;

@@ -7,51 +7,53 @@
     <%= csrf_meta_tags %>
   </head>
   <body ng-app="trinityChurch">
-    <nav class="navbar navbar-default" id="navbar">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <img src="images/cross-and-flame.jpg" id="cross-and-flame">
+    <div class="container">
+      <nav class="navbar navbar-default" id="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <img src="images/cross-and-flame.jpg" id="cross-and-flame">
+          </div>
+          <div class="navbar-header" style="margin-left:10px;">
+            <a href="#" class="navbar-brand">Trinity <br>United <br>Methodist</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-options-menu">
+            <ul class="nav navbar-nav">
+              <!-- Ernie's message  -->
+              <li><a href="#/message">Pastor's Message</a></li>
+              <!-- Committee and Women's events -->
+              <li><a href="#/events">Events</a></li>
+              <li><a href="#/staff">Staff</a></li>
+              <!-- Also include a blurb on history -->
+              <li><a href="#/about">About</a></li>
+            </ul>
+            <div ng-include="'nav/_nav.html'"></div>
+          </div>
         </div>
-        <div class="navbar-header" style="margin-left:10px;">
-          <a href="#" class="navbar-brand">Trinity <br>United <br>Methodist</a>
+      </nav>
+      <div class="row" id="viewport-container">
+          <ui-view>
+            <script type="text/ng-template" id="/home.html"></script>
+            <script type="text/ng-template" id="/posts.html"></script>
+          </ui-view>
+      </div>
+      <div class="row" id="footer">
+        <div class="col-md-4" style="text-align:left">
+          <p style="font-size:15px;text-decoration:underline;">Hours of worship:</p>
+          <p>Wednesday Service: 6:30-8pm</p>
+          <p>Sunday Service: 8-9:30am, 11-12:30pm</p>
+          <p>Sunday Youth Service: 8:30-9:30am, 11:30-12:30pm</p>
+          <a href="http://www.freepik.com/free-photo/wooden-table-with-blurred-background_902419.htm">Background image designed by Freepik</a>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-options-menu">
-          <ul class="nav navbar-nav">
-            <!-- Ernie's message  -->
-            <li><a href="#/message">Pastor's Message</a></li>
-            <!-- Committee and Women's events -->
-            <li><a href="#/events">Events</a></li>
-            <li><a href="#/staff">Staff</a></li>
-            <!-- Also include a blurb on history -->
-            <li><a href="#/about">About</a></li>
-          </ul>
-          <div ng-include="'nav/_nav.html'"></div>
+        <div class="col-md-4" style="text-align:center">
+          <p>832 E Center Street | Warsaw, IN 46580</p>
+        </div>
+        <div class="col-md-4" style="text-align:right">
+          <p><a href="https://www.facebook.com/pages/Trinity-United-Methodist-Church/117418398276272">Find us on Facebook</a></p>
+          <p><a href="#/about">About Trinity United Methodist</a></p>
+          <p><a href="#/staff">Staff at Trinity United Methodist</a></p>
         </div>
       </div>
-    </nav>
-    <div class="container" id="viewport-container">
-      <div class="container" id="ui-container">
-        <ui-view>
-          <script type="text/ng-template" id="/home.html"></script>
-          <script type="text/ng-template" id="/posts.html"></script>
-        </ui-view>
-      </div>
-    </div>
-    <div class="container" id="footer">
-      <div class="col-md-4" style="text-align:left">
-        <p style="font-size:15px;text-decoration:underline;">Hours of worship:</p>
-        <p>Wednesday Service: 6:30-8pm</p>
-        <p>Sunday Service: 8-9:30am, 11-12:30pm</p>
-        <p>Sunday Youth Service: 8:30-9:30am, 11:30-12:30pm</p>
-      </div>
-      <div class="col-md-4" style="text-align:center">
-        <p>832 E Center Street | Warsaw, IN 46580</p>
-      </div>
-      <div class="col-md-4" style="text-align:right">
-        <p><a href="https://www.facebook.com/pages/Trinity-United-Methodist-Church/117418398276272">Find us on Facebook</a></p>
-        <p><a href="#/about">About Trinity United Methodist</a></p>
-        <p><a href="#/staff">Staff at Trinity United Methodist</a></p>
-      </div>
+
     </div>
   </body>
 </html>
