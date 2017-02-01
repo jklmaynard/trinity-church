@@ -4,9 +4,15 @@ GLOBAL ELEMENTS
 a {
   color: black;
 }
+body {
+  background-color: #9BCFDD;
+}
 /***************************
 APPLICATION.HTML.ERB
 ****************************/
+#cross-and-flame {
+  height: 95px;
+}
 #footer {
   border-top-color: grey;
   border-top-style: solid;
@@ -22,7 +28,15 @@ APPLICATION.HTML.ERB
   line-height: 11px;
 }
 #navbar {
+  background-color: lightblue;
   border-radius: 0px;
+  height: 100px;
+}
+#navbar-options-menu {
+  padding-top: 39px;
+}
+#navbar-options-menu li {
+  font-size: 18px;
 }
 #ui-container {
   min-height: 500px;

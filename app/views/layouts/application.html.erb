@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TrinityChurch</title>
+    <title>Trinity</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -10,12 +10,15 @@
     <nav class="navbar navbar-default" id="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand">Trinity United Methodist Church</a>
+          <img src="images/cross-and-flame.jpg" id="cross-and-flame">
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="navbar-header" style="margin-left:10px;">
+          <a href="#" class="navbar-brand">Trinity <br>United <br>Methodist</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-options-menu">
           <ul class="nav navbar-nav">
             <!-- Ernie's message  -->
-            <li><a href="#/message">Message</a></li>
+            <li><a href="#/message">Pastor's Message</a></li>
             <!-- Committee and Women's events -->
             <li><a href="#/events">Events</a></li>
             <li><a href="#/staff">Staff</a></li>
