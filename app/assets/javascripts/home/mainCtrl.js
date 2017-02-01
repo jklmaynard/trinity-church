@@ -8,10 +8,10 @@ angular.module('trinityChurch')
     $scope.events = [];
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
-    })
+    });
     posts.posts.forEach(function (index) {
       !index.is_event ? $scope.posts.push(index) : $scope.events.push(index);
-    })
+    });
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {
         return;
@@ -25,5 +25,8 @@ angular.module('trinityChurch')
       $scope.title = '';
       $scope.body = '';
     };
+    $scope.deletePost = function(posts) {
+      posts.deletePost(post);
+    }
   },
 ])

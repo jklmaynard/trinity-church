@@ -42,7 +42,12 @@ angular.module('trinityChurch', ['ui.router', 'templates', 'Devise'])
     $stateProvider.state('posts_home', {
       url: '/message',
       templateUrl: 'static/_posts_home.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      resolve: {
+        postPromise: ['posts', function(posts) {
+          return posts.getAll();
+        }]
+      }
     });
     $stateProvider.state('create-post', {
       url: '/create-post',

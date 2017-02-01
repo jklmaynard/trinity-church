@@ -12,7 +12,13 @@ angular.module('trinityChurch')
         createPost: function (post) {
           return $http.post('/posts.json', post).then(function(data) {
             obj.posts.push(data.data);
-          })
+          });
+        },
+        deletePost: function (post) {
+          position = obj.posts.indexOf(post);
+          return $http.delete('/posts/' + post.id).then(function(data) {
+            obj.events.splice(position, 1);
+          });
         }
       };
       return obj
