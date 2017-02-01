@@ -19,7 +19,8 @@ angular.module('trinityChurch')
       posts.createPost({
         title: $scope.title,
         body: $scope.body,
-        is_event: $scope.is_event === undefined ? false : true
+        is_event: $scope.is_event === undefined ? false : true,
+        snippet: $scope.body.slice(0, 300) + '(. . . )'
       });
 
       $scope.title = '';

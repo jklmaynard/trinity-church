@@ -6,6 +6,11 @@ angular.module('trinityChurch')
         posts: [],
         getAll: function () {
           return $http.get('/posts.json').then(function(data) {
+            data.data.forEach(function(index) {
+              if (index.body) {
+                index.snippet = index.body.slice(0, 300) + ' (. . .)';
+              }
+            });
             angular.copy(data.data, obj.posts);
           });
         },

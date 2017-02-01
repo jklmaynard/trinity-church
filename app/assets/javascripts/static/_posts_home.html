@@ -5,6 +5,7 @@
   <div ng-repeat="post in posts | orderBy: '-upvotes'" class="message-container col-md-12">
     <div class="message col-md-12">
       <a href="#/posts/{{$index}}">{{post.title}}</a>
+      <p>{{post.snippet}}</p>
       <button type="button" class="btn btn-xs btn-primary" ng-click="deletePost(post)" ng-show="signedIn()">Delete Post</button>
     </div>
   </div>
