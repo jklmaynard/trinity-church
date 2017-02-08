@@ -6,7 +6,7 @@ a {
 }
 body {
   background-color:#81A5D6;
-  background-image: url('background-image.jpg')
+  background-image: url('background-image.jpg');
 }
 .container {
   background-color: white;
