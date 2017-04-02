@@ -8,7 +8,8 @@ angular.module('trinityChurch')
           return $http.get('/posts.json').then(function(data) {
             data.data.forEach(function(index) {
               if (index.body) {
-                index.snippet = index.body.slice(0, 300) + ' (. . .)';
+                var decodedBody = decodeURI(index.body);
+                index.snippet = decodedBody.slice(0, 300) + ' (. . .)';
               }
             });
             angular.copy(data.data, obj.posts);
@@ -25,6 +26,20 @@ angular.module('trinityChurch')
             obj.events.splice(position, 1);
           });
         }
+      };
+      obj.decodeDescription = function(description) {
+        var arr = description.split('%0A'), elementArr = [];
+        arr.forEach(function(index) {
+          if (index.length !== 0) {
+            el = 'p'
+            content = decodeURI(index);
+            elementArr.push({el: el, content: content});
+          } else {
+            el = 'br'
+            elementArr.push({el: el, content: null});
+          }
+        });
+        return elementArr;
       };
       return obj
     }
