@@ -13,6 +13,10 @@ class PostsController < ApplicationController
     respond_with Post.find(params[:id])
   end
 
+  def destroy
+    respond_with Post.destroy(params[:id])
+  end
+
   private
   def post_params
     params.require(:post).permit(:is_event, :title, :body)

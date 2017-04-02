@@ -26,7 +26,7 @@ angular.module('trinityChurch')
       $scope.title = '';
       $scope.body = '';
     };
-    $scope.deletePost = function(posts) {
+    $scope.deletePost = function(post) {
       posts.deletePost(post);
     }
   },

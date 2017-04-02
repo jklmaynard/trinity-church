@@ -23,7 +23,7 @@ angular.module('trinityChurch')
         deletePost: function (post) {
           position = obj.posts.indexOf(post);
           return $http.delete('/posts/' + post.id).then(function(data) {
-            obj.events.splice(position, 1);
+            obj.posts.splice(position, 1);
           });
         }
       };
