@@ -17,7 +17,12 @@ angular.module('trinityChurch', ['ui.router', 'templates', 'Devise'])
     $stateProvider.state('posts', {
       url: '/posts/{id}',
       templateUrl: 'posts/_posts.html',
-      controller: 'PostsCtrl'
+      controller: 'PostsCtrl',
+      resolve: {
+        postPromise: ['posts', function(posts) {
+          return posts.getAll();
+        }]
+      }
     });
     $stateProvider.state('events', {
       url: '/events',
