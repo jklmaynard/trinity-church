@@ -9,9 +9,6 @@ angular.module('trinityChurch')
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
     });
-    posts.posts.forEach(function (index) {
-      !index.is_event ? $scope.posts.push(index) : $scope.events.push(index);
-    });
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {
         return;
@@ -29,5 +26,13 @@ angular.module('trinityChurch')
     $scope.deletePost = function(post) {
       posts.deletePost(post);
     }
-  },
+    posts.posts.forEach(function (index) {
+      if (!index.is_event) {
+        $scope.posts.push(index)
+      } else {
+        index.bodyArray = posts.decodeDescription(index.body);
+        $scope.events.push(index);
+      }
+    });
+  }
 ])
